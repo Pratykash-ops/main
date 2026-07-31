@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { Zap, Shield, Users, ArrowRight, Plus, X, ChevronRight } from "lucide-react";
@@ -17,12 +17,12 @@ const valueIconMap: Record<string, React.ComponentType<{ className?: string }>> 
 export default function About() {
   const [expandedMember, setExpandedMember] = useState<string | null>(null);
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 16 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.45, ease: "easeOut" } },
   };
