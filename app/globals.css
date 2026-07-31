@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F8FAFC; /* Clean professional slate white background */
+  --foreground: #0F172A; /* Slate text color */
+  --card: #FFFFFF;
+  --card-foreground: #0F172A;
+  --border: #E2E8F0;
+  
+  --primary: #2563EB; /* Corporate Royal Blue */
+  --primary-hover: #1D4ED8;
+  --secondary: #1E293B; /* Slate Gray Dark */
+  --secondary-hover: #0F172A;
+  --accent: #FACC15; /* Bright Sun Yellow */
+  --muted: #64748B;
+  
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-heading: var(--font-outfit), var(--font-geist-sans), Arial, sans-serif;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  
+  --font-sans: var(--font-sans);
+  --font-heading: var(--font-heading);
+  
+  --shadow-flat-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --shadow-flat-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-flat-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Corporate Rounded Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Corporate blueprint grid texture */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(37, 99, 235, 0.035) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(37, 99, 235, 0.035) 1px, transparent 1px);
+}
+
+/* Accent gradient blob */
+.accent-glow {
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.15) 0%, rgba(37, 99, 235, 0.05) 50%, transparent 100%);
+  filter: blur(40px);
 }
