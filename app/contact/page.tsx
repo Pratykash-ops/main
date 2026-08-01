@@ -82,7 +82,7 @@ function ContactContent() {
       // const PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 
       await emailjs.send(
-        "service_nxrylzl", // Replace with your Service ID
+        "service_xc59b8a", // Replace with your Service ID
         "template_n51f2uo", // Replace with your Template ID
         {
           name: name,
