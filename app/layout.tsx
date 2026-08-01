@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     siteName: "Minami Labs",
     images: [
       {
-        url: "https://minamilabs.in/assets/logo_color-no_bg.png",
+        url: "https://minamilabs.in/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Minami Labs Logo",
+        alt: "Minami Labs OG Image",
       },
     ],
     locale: "en_IN",
@@ -56,12 +56,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Minami Labs | Web Design & Development Studio",
     description: "We build beautiful websites, brands, and digital tools that grow your business.",
-    images: ["https://minamilabs.in/assets/logo_color-no_bg.png"],
+    images: ["https://minamilabs.in/og-image.png"],
     creator: "@minamilabs",
   },
   other: {
-    "og:image": "https://minamilabs.in/assets/logo_color-no_bg.png",
-    "twitter:image": "https://minamilabs.in/assets/logo_color-no_bg.png",
+    "og:image": "https://minamilabs.in/og-image.png",
+    "twitter:image": "https://minamilabs.in/og-image.png",
   },
   robots: {
     index: true,
